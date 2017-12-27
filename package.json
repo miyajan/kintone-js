@@ -1,0 +1,35 @@
+{
+  "name": "@miyajan/kintone-js",
+  "version": "0.1.0",
+  "description": "kintone API Library for JavaScript (both on web browser and Node.js)",
+  "keywords": [
+    "kintone"
+  ],
+  "main": "./dist/main.js",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test:integration": "mocha --timeout 30000 --require espower-typescript/guess test/**/*.ts",
+    "compile": "tsc",
+    "publish": "npm publish --access=public"
+  },
+  "repository": "https://github.com/miyajan/kintone-js.git",
+  "author": "miyajan <miyajan777@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mocha": "^2.2.45",
+    "@types/node-fetch": "^1.6.7",
+    "@types/url-search-params": "^0.10.0",
+    "espower-typescript": "^8.1.2",
+    "mocha": "^4.0.1",
+    "power-assert": "^1.4.4",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "node-fetch": "^1.7.3",
+    "url-search-params": "^0.10.0"
+  }
+}
