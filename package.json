@@ -10,7 +10,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "test:integration": "mocha --timeout 30000 --require espower-typescript/guess test/**/*.ts",
+    "test:integration": "mocha --timeout 30000 --require espower-typescript/guess test/integration/**/*.ts",
     "compile": "tsc",
     "publish": "npm publish --access=public"
   },
