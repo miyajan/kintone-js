@@ -1,7 +1,7 @@
-import HeadersDecorator from "./headers-decorator";
 import Headers from '../headers';
+import UserAuth from './user-auth';
 
-export default class PasswordAuth implements HeadersDecorator {
+export default class PasswordAuth implements UserAuth {
     private readonly username: string;
     private readonly password: string;
 
@@ -10,7 +10,7 @@ export default class PasswordAuth implements HeadersDecorator {
         this.password = password;
     }
 
-    decorateHeaders(headers: Headers): void {
+    customizeHeaders(headers: Headers): void {
         headers['X-Cybozu-Authorization'] = Buffer.from(`${this.username}:${this.password}`).toString('base64');
     }
 }

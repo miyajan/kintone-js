@@ -8,7 +8,7 @@ export default class ApiTokenAuth implements UserAuth {
         this.token = token;
     }
 
-    decorateHeaders(headers: Headers): void {
+    customizeHeaders(headers: Headers): void {
         headers['X-Cybozu-API-Token'] = this.token;
     }
 }

@@ -1,4 +1,4 @@
-import HeadersDecorator from './headers-decorator';
+import HeadersCustomizer from './headers-customizer';
 
-export default interface UserAuth extends HeadersDecorator {
+export default interface UserAuth extends HeadersCustomizer {
 }

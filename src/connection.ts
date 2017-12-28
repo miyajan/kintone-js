@@ -12,9 +12,9 @@ export default class Connection {
         const url = this.setting.baseUrl + path;
         const headers = {};
 
-        this.setting.userAuth.decorateHeaders(headers);
+        this.setting.userAuth.customizeHeaders(headers);
         if (this.setting.basicAuth !== undefined) {
-            this.setting.basicAuth.decorateHeaders(headers);
+            this.setting.basicAuth.customizeHeaders(headers);
         }
 
         return fetch(url, {
