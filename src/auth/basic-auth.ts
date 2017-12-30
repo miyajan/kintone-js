@@ -1,5 +1,5 @@
-import HeadersCustomizer from './headers-customizer';
-import Headers from '../headers';
+import Headers from "../headers";
+import HeadersCustomizer from "./headers-customizer";
 
 export default class BasicAuth implements HeadersCustomizer {
     private readonly username: string;
@@ -10,7 +10,7 @@ export default class BasicAuth implements HeadersCustomizer {
         this.password = password;
     }
 
-    customizeHeaders(headers: Headers): void {
-        headers['Authorization'] = `Basic ${Buffer.from(`${this.username}:${this.password}`).toString('base64')}`;
+    public customizeHeaders(headers: Headers): void {
+        headers.Authorization = `Basic ${Buffer.from(`${this.username}:${this.password}`).toString("base64")}`;
     }
 }

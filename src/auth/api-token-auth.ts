@@ -1,5 +1,5 @@
+import Headers from "../headers";
 import UserAuth from "./user-auth";
-import Headers from '../headers';
 
 export default class ApiTokenAuth implements UserAuth {
     private readonly token: string;
@@ -8,7 +8,7 @@ export default class ApiTokenAuth implements UserAuth {
         this.token = token;
     }
 
-    customizeHeaders(headers: Headers): void {
-        headers['X-Cybozu-API-Token'] = this.token;
+    public customizeHeaders(headers: Headers): void {
+        headers["X-Cybozu-API-Token"] = this.token;
     }
 }

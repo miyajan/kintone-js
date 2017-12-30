@@ -10,8 +10,11 @@
     "node": ">=6"
   },
   "scripts": {
+    "build:js": "webpack && webpack --optimize-minimize",
+    "build:ts": "tsc",
+    "lint": "tslint src/**/*.ts test/**/*.ts",
+    "lint:fix": "tslint --fix src/**/*.ts test/**/*.ts",
     "test:integration": "mocha --timeout 30000 --require espower-typescript/guess test/integration/**/*.ts",
-    "compile": "tsc",
     "publish": "npm publish --access=public"
   },
   "repository": "https://github.com/miyajan/kintone-js.git",
@@ -25,6 +28,7 @@
     "mocha": "^4.0.1",
     "power-assert": "^1.4.4",
     "ts-loader": "^3.2.0",
+    "tslint": "^5.8.0",
     "typescript": "^2.6.2",
     "webpack": "^3.10.0"
   },

@@ -1,5 +1,5 @@
-import Headers from '../headers';
-import UserAuth from './user-auth';
+import Headers from "../headers";
+import UserAuth from "./user-auth";
 
 export default class PasswordAuth implements UserAuth {
     private readonly username: string;
@@ -10,7 +10,7 @@ export default class PasswordAuth implements UserAuth {
         this.password = password;
     }
 
-    customizeHeaders(headers: Headers): void {
-        headers['X-Cybozu-Authorization'] = Buffer.from(`${this.username}:${this.password}`).toString('base64');
+    public customizeHeaders(headers: Headers): void {
+        headers["X-Cybozu-Authorization"] = Buffer.from(`${this.username}:${this.password}`).toString("base64");
     }
 }

@@ -1,5 +1,5 @@
-import AppResponse from '../response/app';
-import AppModel from '../model/app';
+import AppModel from "../model/app";
+import AppResponse from "../response/app";
 import Datetime from "./datetime";
 import User from "./user";
 
@@ -23,7 +23,7 @@ export default class App {
             createdAt: this.datetime.fromStringToDate(response.createdAt),
             creator: this.user.fromResponseToModel(response.creator),
             modifiedAt: this.datetime.fromStringToDate(response.modifiedAt),
-            modifier: this.user.fromResponseToModel(response.modifier)
+            modifier: this.user.fromResponseToModel(response.modifier),
         };
     }
 }
