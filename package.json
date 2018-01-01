@@ -12,7 +12,7 @@
   "scripts": {
     "build:js": "webpack && webpack --optimize-minimize",
     "build:ts": "tsc",
-    "docs:build": "typedoc --out gh-pages/docs --excludeNotExported src && nodetouch docs/.nojekyll",
+    "docs:build": "typedoc --out gh-pages/docs --excludeNotExported src && nodetouch gh-pages/docs/.nojekyll",
     "docs:checkout": "./bin/docs-checkout.sh",
     "docs:release": "./bin/docs-release.sh",
     "docs": "yarn run docs:checkout && yarn run docs:build && yarn run docs:release",
