@@ -14,6 +14,9 @@ export default class App {
         this.appConverter = new AppConverter();
     }
 
+    /**
+     * @see {@link https://developer.kintone.io/hc/en-us/articles/212494888}
+     */
     public getApp(appId: number | string): Promise<AppModel> {
         const params = new URLSearchParams();
         params.set("id", String(appId));
