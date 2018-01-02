@@ -1,0 +1,69 @@
+references:
+  commands:
+    restore_npm_cache: &restore_npm_cache
+      restore_cache:
+        keys:
+          - v1-npm-deps-{{ checksum "package.json" }}
+          - v1-npm-deps
+    save_npm_cache: &save_npm_cache
+      save_cache:
+        key: v1-npm-deps-{{ checksum "package.json" }}
+        paths:
+          - node_modules
+  environments:
+    node: &node
+      docker:
+        - image: circleci/node:6.12.2
+
+version: 2
+jobs:
+  docs:
+    <<: *node
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "a4:1a:67:a2:5a:22:3d:53:bf:d4:12:a6:63:f8:35:5d"
+      - checkout
+      - *restore_npm_cache
+      - yarn install
+      - *save_npm_cache
+      - run:
+          environment:
+            GIT_COMMIT_MESSAGE: "CircleCI build ${CIRCLE_BUILD_NUM}"
+          command: yarn run docs
+  lint:
+    <<: *node
+    steps:
+      - checkout
+      - *restore_npm_cache
+      - yarn install
+      - *save_npm_cache
+      - run: yarn run lint
+  shellcheck:
+    docker:
+      - image: koalaman/shellcheck:v0.4.7
+    steps:
+      - checkout
+      - run: shellcheck ./bin/*.sh
+  test:
+    <<: *node
+    steps:
+      - checkout
+      - *restore_npm_cache
+      - yarn install
+      - *save_npm_cache
+      - run: yarn run test:integration
+      - store_test_results:
+          path: results
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - shellcheck
+      - lint
+      - test
+      - docs:
+          filters:
+            branchs:
+              only: master
