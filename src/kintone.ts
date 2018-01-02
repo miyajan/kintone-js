@@ -1,6 +1,6 @@
+import App from "./api/app";
 import UserAuth from "./auth/user-auth";
 import Connection from "./connection";
-import App from "./api/app";
 
 export default class Kintone {
     public readonly app: App;
@@ -8,7 +8,7 @@ export default class Kintone {
     public constructor(baseUrl: string, userAuth: UserAuth) {
         const setting = {
             baseUrl: baseUrl,
-            userAuth: userAuth
+            userAuth: userAuth,
         };
         const conn = new Connection(setting);
         this.app = new App(conn);

@@ -16,10 +16,10 @@
     "docs:checkout": "./bin/docs-checkout.sh",
     "docs:release": "./bin/docs-release.sh",
     "docs": "yarn run docs:checkout && yarn run docs:build && yarn run docs:release",
-    "lint": "tslint src/**/*.ts test/**/*.ts",
-    "lint:fix": "tslint --fix src/**/*.ts test/**/*.ts",
+    "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
+    "lint:fix": "tslint --fix 'src/**/*.ts' 'test/**/*.ts'",
     "publish": "npm publish --access=public",
-    "test:integration": "mocha --reporter mocha-multi-reporters --reporter-options configFile=config.json --timeout 30000 --require espower-typescript/guess test/integration/**/*.ts"
+    "test:integration": "mocha --reporter mocha-multi-reporters --reporter-options configFile=config.json --timeout 30000 --require espower-typescript/guess 'test/integration/**/*.ts'"
   },
   "repository": "https://github.com/miyajan/kintone-js.git",
   "author": "miyajan <miyajan777@gmail.com>",
