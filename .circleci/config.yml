@@ -25,24 +25,25 @@ jobs:
             - "a4:1a:67:a2:5a:22:3d:53:bf:d4:12:a6:63:f8:35:5d"
       - checkout
       - *restore_npm_cache
-      - yarn install
+      - run: yarn install
       - *save_npm_cache
+      # https://circleci.com/docs/2.0/env-vars/#interpolating-environment-variables-to-set-other-environment-variables
+      - run: echo 'export GIT_COMMIT_MESSAGE="CircleCI build ${CIRCLE_BUILD_NUM}"' >> $BASH_ENV
       - run:
-          environment:
-            GIT_COMMIT_MESSAGE: "CircleCI build ${CIRCLE_BUILD_NUM}"
           command: yarn run docs
   lint:
     <<: *node
     steps:
       - checkout
       - *restore_npm_cache
-      - yarn install
+      - run: yarn install
       - *save_npm_cache
       - run: yarn run lint
   shellcheck:
     docker:
-      - image: koalaman/shellcheck:v0.4.7
+      - image: ubuntu:16.04
     steps:
+      - run: apt-get update && apt-get install -y shellcheck
       - checkout
       - run: shellcheck ./bin/*.sh
   test:
@@ -50,7 +51,7 @@ jobs:
     steps:
       - checkout
       - *restore_npm_cache
-      - yarn install
+      - run: yarn install
       - *save_npm_cache
       - run: yarn run test:integration
       - store_test_results:
@@ -65,5 +66,5 @@ workflows:
       - test
       - docs:
           filters:
-            branchs:
+            branches:
               only: master
