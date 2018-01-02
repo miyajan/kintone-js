@@ -20,6 +20,9 @@ jobs:
   docs:
     <<: *node
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "a4:1a:67:a2:5a:22:3d:53:bf:d4:12:a6:63:f8:35:5d"
       - checkout
       - *restore_npm_cache
       - yarn install
