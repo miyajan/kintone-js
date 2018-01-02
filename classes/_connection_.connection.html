@@ -94,7 +94,9 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_connection_.connection.html#request" class="tsd-kind-icon">request</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_connection_.connection.html#requestget" class="tsd-kind-icon">request<wbr>Get</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_connection_.connection.html#requestpost" class="tsd-kind-icon">request<wbr>Post</a></li>
 							</ul>
 						</section>
 					</div>
@@ -112,7 +114,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/eef4773/src/connection.ts#L6">connection.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/461c057/src/connection.ts#L7">connection.ts:7</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -134,24 +136,24 @@
 					<div class="tsd-signature tsd-kind-icon">setting<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_setting_.setting.html" class="tsd-signature-type">Setting</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/eef4773/src/connection.ts#L6">connection.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/461c057/src/connection.ts#L7">connection.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="requestget" class="tsd-anchor"></a>
-					<h3>request<wbr>Get</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">request<wbr>Get<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, params<span class="tsd-signature-symbol">: </span><a href="../interfaces/_get_parameters_.getparameters.html" class="tsd-signature-type">GetParameters</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="request" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> request</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">request<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, params<span class="tsd-signature-symbol">: </span><a href="../interfaces/_parameters_.parameters.html" class="tsd-signature-type">Parameters</a>, method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RequestMethod</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/eef4773/src/connection.ts#L12">connection.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/461c057/src/connection.ts#L21">connection.ts:21</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -160,7 +162,62 @@
 									<h5>path: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>params: <a href="../interfaces/_get_parameters_.getparameters.html" class="tsd-signature-type">GetParameters</a></h5>
+									<h5>params: <a href="../interfaces/_parameters_.parameters.html" class="tsd-signature-type">Parameters</a></h5>
+								</li>
+								<li>
+									<h5>method: <span class="tsd-signature-type">RequestMethod</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="requestget" class="tsd-anchor"></a>
+					<h3>request<wbr>Get</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">request<wbr>Get<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, params<span class="tsd-signature-symbol">: </span><a href="../interfaces/_parameters_.parameters.html" class="tsd-signature-type">Parameters</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/461c057/src/connection.ts#L13">connection.ts:13</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>params: <a href="../interfaces/_parameters_.parameters.html" class="tsd-signature-type">Parameters</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="requestpost" class="tsd-anchor"></a>
+					<h3>request<wbr>Post</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">request<wbr>Post<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, params<span class="tsd-signature-symbol">: </span><a href="../interfaces/_parameters_.parameters.html" class="tsd-signature-type">Parameters</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/461c057/src/connection.ts#L17">connection.ts:17</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>params: <a href="../interfaces/_parameters_.parameters.html" class="tsd-signature-type">Parameters</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -176,7 +233,7 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="../modules/_api_app_.html">"api/app"</a>
+						<a href="../modules/_api_app_api_.html">"api/app-<wbr>api"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_auth_api_token_auth_.html">"auth/api-<wbr>token-<wbr>auth"</a>
@@ -200,13 +257,13 @@
 						<a href="../modules/_converter_app_.html">"converter/app"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="../modules/_converter_app_info_.html">"converter/app-<wbr>info"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_converter_datetime_.html">"converter/datetime"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_converter_user_.html">"converter/user"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_get_parameters_.html">"get-<wbr>parameters"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_headers_.html">"headers"</a>
@@ -221,10 +278,22 @@
 						<a href="../modules/_model_app_.html">"model/app"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="../modules/_model_app_info_.html">"model/app-<wbr>info"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_model_user_.html">"model/user"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="../modules/_parameters_.html">"parameters"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_request_method_.html">"request-<wbr>method"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_response_app_.html">"response/app"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_response_app_info_.html">"response/app-<wbr>info"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_response_apps_.html">"response/apps"</a>
@@ -250,8 +319,14 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_connection_.connection.html#setting" class="tsd-kind-icon">setting</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_connection_.connection.html#request" class="tsd-kind-icon">request</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_connection_.connection.html#requestget" class="tsd-kind-icon">request<wbr>Get</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_connection_.connection.html#requestpost" class="tsd-kind-icon">request<wbr>Post</a>
 							</li>
 						</ul>
 					</li>
