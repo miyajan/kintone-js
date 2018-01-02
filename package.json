@@ -12,14 +12,14 @@
   "scripts": {
     "build:js": "webpack && webpack --optimize-minimize",
     "build:ts": "tsc",
-    "docs:build": "typedoc --out gh-pages/docs --excludeNotExported src && nodetouch gh-pages/docs/.nojekyll",
+    "docs:build": "rimraf gh-pages/* && typedoc --out gh-pages --excludeNotExported --disableOutputCheck src && nodetouch gh-pages/.nojekyll",
     "docs:checkout": "./bin/docs-checkout.sh",
     "docs:release": "./bin/docs-release.sh",
     "docs": "yarn run docs:checkout && yarn run docs:build && yarn run docs:release",
     "lint": "tslint src/**/*.ts test/**/*.ts",
     "lint:fix": "tslint --fix src/**/*.ts test/**/*.ts",
     "publish": "npm publish --access=public",
-    "test:integration": "mocha --timeout 30000 --require espower-typescript/guess test/integration/**/*.ts"
+    "test:integration": "mocha --reporter mocha-multi-reporters --reporter-options configFile=config.json --timeout 30000 --require espower-typescript/guess test/integration/**/*.ts"
   },
   "repository": "https://github.com/miyajan/kintone-js.git",
   "author": "miyajan <miyajan777@gmail.com>",
@@ -30,7 +30,10 @@
     "@types/url-search-params": "^0.10.0",
     "espower-typescript": "^8.1.2",
     "mocha": "^4.0.1",
+    "mocha-junit-reporter": "^1.15.0",
+    "mocha-multi-reporters": "^1.1.7",
     "power-assert": "^1.4.4",
+    "rimraf": "^2.6.2",
     "touch": "^3.1.0",
     "ts-loader": "^3.2.0",
     "tslint": "^5.8.0",

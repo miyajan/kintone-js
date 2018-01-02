@@ -2,3 +2,5 @@ node_modules
 build
 src/**/*.js
 test/**/*.js
+gh-pages
+results
