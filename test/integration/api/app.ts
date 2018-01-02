@@ -16,9 +16,9 @@ describe("App", function() {
         const basicPassword = process.env.BASIC_PASSWORD || "";
         const basicAuth = new BasicAuth(basicUsername, basicPassword);
         const setting = {
-            baseUrl,
+            baseUrl: baseUrl,
             userAuth: passwordAuth,
-            basicAuth,
+            basicAuth: basicAuth,
         };
         const conn = new Connection(setting);
         sut = new App(conn);
@@ -27,6 +27,30 @@ describe("App", function() {
     describe("getApp", function() {
         it("should get app", function() {
             return sut.getApp(2).then((app) => {
+                assert(app.appId === "2");
+                assert(app.code === "");
+                assert(app.name === "問い合わせ管理");
+                assert(app.description === "<div><div>問い合わせ管理アプリです。</div></div>");
+                assert(app.spaceId === null);
+                assert(app.threadId === null);
+                assert(app.createdAt.getTime() === new Date("2017-12-27T14:36:08.000Z").getTime());
+                assert.deepEqual(app.creator, {
+                    code: "user1",
+                    name: "user1",
+                });
+                assert(app.modifiedAt.getTime() === new Date("2017-12-30T16:21:30.000Z").getTime());
+                assert.deepEqual(app.modifier, {
+                    code: "user1",
+                    name: "user1",
+                });
+            });
+        });
+    });
+
+    describe("getApps", function() {
+        it("should get apps", function() {
+            return sut.getApps([2]).then((apps) => {
+                const app = apps[0];
                 assert(app.appId === "2");
                 assert(app.code === "");
                 assert(app.name === "問い合わせ管理");

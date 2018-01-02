@@ -1,3 +1,3 @@
-import Kintone from './kintone';
+import Kintone from "./kintone";
 
 export = Kintone;
