@@ -15,6 +15,9 @@ export default class App {
     }
 
     /**
+     * Gets general information of an App, including the name, description, related Space, creator and updater
+     * information.
+     * API Tokens cannot be used with this API.
      * @see {@link https://developer.kintone.io/hc/en-us/articles/212494888}
      */
     public getApp(appId: number | string): Promise<AppModel> {
