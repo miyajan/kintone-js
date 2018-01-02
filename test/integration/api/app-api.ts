@@ -1,11 +1,11 @@
 import assert = require("assert");
-import App from "../../../src/api/app";
+import AppAPI from "../../../src/api/app-api";
 import BasicAuth from "../../../src/auth/basic-auth";
 import PasswordAuth from "../../../src/auth/password-auth";
 import Connection from "../../../src/connection";
 
-describe("App", function() {
-    let sut: App;
+describe("AppAPI", function() {
+    let sut: AppAPI;
 
     beforeEach(function() {
         const baseUrl = process.env.BASE_URL || "";
@@ -21,7 +21,7 @@ describe("App", function() {
             basicAuth: basicAuth,
         };
         const conn = new Connection(setting);
-        sut = new App(conn);
+        sut = new AppAPI(conn);
     });
 
     describe("getApp", function() {
@@ -67,6 +67,15 @@ describe("App", function() {
                     code: "user1",
                     name: "user1",
                 });
+            });
+        });
+    });
+
+    describe("createPreviewApp", function() {
+        it("should create preview app", function() {
+            return sut.createPreviewApp("TestPreviewApp").then(appInfo => {
+                assert(typeof appInfo.app === "string");
+                assert(appInfo.revision === "2");
             });
         });
     });

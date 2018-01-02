@@ -1,5 +1,6 @@
 import fetch from "node-fetch";
-import GetParameters from "./get-parameters";
+import Parameters from "./parameters";
+import RequestMethod from "./request-method";
 import Setting from "./setting";
 
 export default class Connection {
@@ -9,11 +10,19 @@ export default class Connection {
         this.setting = setting;
     }
 
-    public requestGet(path: string, params: GetParameters): Promise<any> {
+    public requestGet(path: string, params: Parameters): Promise<any> {
+        return this.request(path, params, RequestMethod.GET);
+    }
+
+    public requestPost(path: string, params: Parameters): Promise<any> {
+        return this.request(path, params, RequestMethod.POST);
+    }
+
+    private request(path: string, params: Parameters, method: RequestMethod): Promise<any> {
         const url = this.setting.baseUrl + path;
         const headers = {
             "Content-Type": "application/json",
-            "X-HTTP-Method-Override": "GET",
+            "X-HTTP-Method-Override": method,
         };
 
         this.setting.userAuth.customizeHeaders(headers);
