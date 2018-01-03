@@ -38,7 +38,11 @@ export default class Connection {
             if (res.ok) {
                 return res.json();
             } else {
-                return Promise.reject(new Error(res.statusText));
+                return new Promise((_, reject) => {
+                    res.json().then(json => {
+                        reject(json);
+                    });
+                });
             }
         });
     }

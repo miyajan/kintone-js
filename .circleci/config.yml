@@ -46,7 +46,7 @@ jobs:
       - run: apt-get update && apt-get install -y shellcheck
       - checkout
       - run: shellcheck ./bin/*.sh
-  test:
+  test-integration:
     <<: *node
     steps:
       - checkout
@@ -56,6 +56,16 @@ jobs:
       - run: yarn run test:integration
       - store_test_results:
           path: results
+  test-unit:
+    <<: *node
+    steps:
+      - checkout
+      - *restore_npm_cache
+      - run: yarn install
+      - *save_npm_cache
+      - run: yarn run test:unit
+      - store_test_results:
+          path: results
 
 workflows:
   version: 2
@@ -63,7 +73,8 @@ workflows:
     jobs:
       - shellcheck
       - lint
-      - test
+      - test-unit
+      - test-integration
       - docs:
           filters:
             branches:

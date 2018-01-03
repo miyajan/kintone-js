@@ -3,6 +3,7 @@ import AppAPI from "../../../src/api/app-api";
 import BasicAuth from "../../../src/auth/basic-auth";
 import PasswordAuth from "../../../src/auth/password-auth";
 import Connection from "../../../src/connection";
+import DeployStatus from "../../../src/model/deploy-status";
 
 describe("AppAPI", function() {
     let sut: AppAPI;
@@ -76,6 +77,33 @@ describe("AppAPI", function() {
             return sut.createPreviewApp("TestPreviewApp").then(appInfo => {
                 assert(typeof appInfo.app === "string");
                 assert(appInfo.revision === "2");
+            });
+        });
+    });
+
+    describe("deployAppSettings", function() {
+        it("should deploy app settings", function() {
+            let appId;
+            return sut.createPreviewApp("TestPreviewApp").then(appInfo => {
+                appId = appInfo.app;
+                return sut.deployAppSettings([appInfo]);
+            }).then(res => {
+                assert(res === undefined);
+                return sut.waitDeployFinished(appId);
+            }).then(() => {
+                return sut.getApp(appId);
+            }).then(app => {
+                assert(app.appId === appId);
+                assert(app.name === "TestPreviewApp");
+            });
+        });
+    });
+
+    describe("getAppDeployStatus", function() {
+        it("should get app deploy status", function() {
+            return sut.getAppDeployStatus([2]).then(statuses => {
+                assert(statuses[0].app === "2");
+                assert(statuses[0].status === DeployStatus.SUCCESS);
             });
         });
     });
