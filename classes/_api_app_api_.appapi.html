@@ -89,16 +89,22 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_api_app_api_.appapi.html#appconverter" class="tsd-kind-icon">app<wbr>Converter</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_api_app_api_.appapi.html#appdeploystatusconverter" class="tsd-kind-icon">app<wbr>Deploy<wbr>Status<wbr>Converter</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_api_app_api_.appapi.html#appinfoconverter" class="tsd-kind-icon">app<wbr>Info<wbr>Converter</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_api_app_api_.appapi.html#conn" class="tsd-kind-icon">conn</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_api_app_api_.appapi.html#guestcontext" class="tsd-kind-icon">guest<wbr>Context</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_api_app_api_.appapi.html#createpreviewapp" class="tsd-kind-icon">create<wbr>Preview<wbr>App</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_api_app_api_.appapi.html#deployappsettings" class="tsd-kind-icon">deploy<wbr>App<wbr>Settings</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_api_app_api_.appapi.html#getapp" class="tsd-kind-icon">get<wbr>App</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_api_app_api_.appapi.html#getappdeploystatus" class="tsd-kind-icon">get<wbr>App<wbr>Deploy<wbr>Status</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_api_app_api_.appapi.html#getapps" class="tsd-kind-icon">get<wbr>Apps</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_api_app_api_.appapi.html#setguestcontext" class="tsd-kind-icon">set<wbr>Guest<wbr>Context</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_api_app_api_.appapi.html#waitdeployfinished" class="tsd-kind-icon">wait<wbr>Deploy<wbr>Finished</a></li>
 							</ul>
 						</section>
 					</div>
@@ -116,7 +122,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/461c057/src/api/app-api.ts#L14">api/app-api.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/994ebc2/src/api/app-api.ts#L23">api/app-api.ts:23</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -138,7 +144,17 @@
 					<div class="tsd-signature tsd-kind-icon">app<wbr>Converter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AppConverter</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/461c057/src/api/app-api.ts#L13">api/app-api.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/994ebc2/src/api/app-api.ts#L20">api/app-api.ts:20</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="appdeploystatusconverter" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> app<wbr>Deploy<wbr>Status<wbr>Converter</h3>
+					<div class="tsd-signature tsd-kind-icon">app<wbr>Deploy<wbr>Status<wbr>Converter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AppDeployStatusConverter</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/994ebc2/src/api/app-api.ts#L21">api/app-api.ts:21</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -148,7 +164,7 @@
 					<div class="tsd-signature tsd-kind-icon">app<wbr>Info<wbr>Converter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AppInfoConverter</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/461c057/src/api/app-api.ts#L14">api/app-api.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/994ebc2/src/api/app-api.ts#L22">api/app-api.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -158,7 +174,17 @@
 					<div class="tsd-signature tsd-kind-icon">conn<span class="tsd-signature-symbol">:</span> <a href="_connection_.connection.html" class="tsd-signature-type">Connection</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/461c057/src/api/app-api.ts#L12">api/app-api.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/994ebc2/src/api/app-api.ts#L19">api/app-api.ts:19</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="guestcontext" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> guest<wbr>Context</h3>
+					<div class="tsd-signature tsd-kind-icon">guest<wbr>Context<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_guest_context_.guestcontext.html" class="tsd-signature-type">GuestContext</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/994ebc2/src/api/app-api.ts#L23">api/app-api.ts:23</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -175,17 +201,17 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/461c057/src/api/app-api.ts#L102">api/app-api.ts:102</a></li>
+									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/994ebc2/src/api/app-api.ts#L133">api/app-api.ts:133</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Creates a preview App.
 										The <a href="https://developer.kintone.io/hc/en-us/articles/115004881348" class="external">Deploy App Settings API</a> must be used on
-										the created preview App for the App to become live.
-										Permission to create Apps in the Default App Group is needed.
-									API Tokens cannot be used with this API.</p>
+									the created preview App for the App to become live.</p>
 								</div>
+								<p>Permission to create Apps in the Default App Group is needed.
+								API Tokens cannot be used with this API.</p>
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>
 									<dd><p><a href="https://developer.kintone.io/hc/en-us/articles/115004712547" class="external">https://developer.kintone.io/hc/en-us/articles/115004712547</a></p>
@@ -219,6 +245,58 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="deployappsettings" class="tsd-anchor"></a>
+					<h3>deploy<wbr>App<wbr>Settings</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">deploy<wbr>App<wbr>Settings<span class="tsd-signature-symbol">(</span>apps<span class="tsd-signature-symbol">: </span><a href="../interfaces/_request_app_info_request_.appinforequest.html" class="tsd-signature-type">AppInfoRequest</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_request_app_info_request_.appinforequest.html" class="tsd-signature-type">AppInfoRequest</a><span class="tsd-signature-symbol">[]</span>, revert<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/994ebc2/src/api/app-api.ts#L172">api/app-api.ts:172</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Updates the settings of a pre-live App to the live App.</p>
+								</div>
+								<p>Using this API is the same as clicking on &quot;Update App&quot; in the kintone App&#39;s settings. Changes made to pre-live
+								settings will not be deployed to the live app until this API is used.</p>
+								<p>This API can also be used to revert the pre-live settings back to the current live app settings. This would be
+								the same as clicking on &quot;Discard Changes&quot; in the kintone App&#39;s settings.</p>
+								<p>If multiple apps are specified in this API, and one of the updates to an App fails, all of the specified Apps
+								will rollback to the state before this API was run.</p>
+								<p>App Management Permissions are needed.
+								API Tokens cannot be used with this API.</p>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://developer.kintone.io/hc/en-us/articles/115004881348" class="external">https://developer.kintone.io/hc/en-us/articles/115004881348</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>apps: <a href="../interfaces/_request_app_info_request_.appinforequest.html" class="tsd-signature-type">AppInfoRequest</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_request_app_info_request_.appinforequest.html" class="tsd-signature-type">AppInfoRequest</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The App or list of Apps to deploy the pre-live settings to the live Apps. The Maximum limit is 300.
+										If Apps are being deployed to Guest Spaces, Apps can only be deployed to the same Guest Space.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> revert: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Specify &quot;true&quot; to cancel all changes made to the pre-live settings. The pre-live settings will be
+										reverted back to the current settings of the live app.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getapp" class="tsd-anchor"></a>
 					<h3>get<wbr>App</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -228,16 +306,16 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/461c057/src/api/app-api.ts#L30">api/app-api.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/994ebc2/src/api/app-api.ts#L47">api/app-api.ts:47</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Gets general information of an App, including the name, description, related Space, creator and updater
-										information.
-										Permissions to view the App is needed.
-									API Tokens cannot be used with this API.</p>
+									information.</p>
 								</div>
+								<p>Permissions to view the App is needed.
+								API Tokens cannot be used with this API.</p>
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>
 									<dd><p><a href="https://developer.kintone.io/hc/en-us/articles/212494888" class="external">https://developer.kintone.io/hc/en-us/articles/212494888</a></p>
@@ -258,6 +336,45 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getappdeploystatus" class="tsd-anchor"></a>
+					<h3>get<wbr>App<wbr>Deploy<wbr>Status</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>App<wbr>Deploy<wbr>Status<span class="tsd-signature-symbol">(</span>apps<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_model_app_deploy_status_.appdeploystatus.html" class="tsd-signature-type">AppDeployStatus</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/994ebc2/src/api/app-api.ts#L199">api/app-api.ts:199</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the deployment status of the App settings for multiple Apps.</p>
+								</div>
+								<p>App Management Permissions are needed.
+								API Tokens cannot be used with this API.</p>
+								<dl class="tsd-comment-tags">
+									<dt>see</dt>
+									<dd><p><a href="https://developer.kintone.io/hc/en-us/articles/115004890947" class="external">https://developer.kintone.io/hc/en-us/articles/115004890947</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>apps: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The list of App IDs to check the deploy statuses of. The Maximum limit is 300.
+										If Apps in Guest Spaces are specified, all Apps specified in the request must belong to that Guest Space.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_model_app_deploy_status_.appdeploystatus.html" class="tsd-signature-type">AppDeployStatus</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getapps" class="tsd-anchor"></a>
 					<h3>get<wbr>Apps</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -267,16 +384,16 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/461c057/src/api/app-api.ts#L59">api/app-api.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/994ebc2/src/api/app-api.ts#L85">api/app-api.ts:85</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Gets general information of multiple Apps, including the name, description, related Space, creator and updater
-										information.
-										Permissions to view the Apps are needed.
-									API Tokens cannot be used with this API.</p>
+									information.</p>
 								</div>
+								<p>Permissions to view the Apps are needed.
+								API Tokens cannot be used with this API.</p>
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>
 									<dd><p><a href="https://developer.kintone.io/hc/en-us/articles/115005336727" class="external">https://developer.kintone.io/hc/en-us/articles/115005336727</a></p>
@@ -335,6 +452,70 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setguestcontext" class="tsd-anchor"></a>
+					<h3>set<wbr>Guest<wbr>Context</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Guest<wbr>Context<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><a href="../interfaces/_guest_context_.guestcontext.html" class="tsd-signature-type">GuestContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/994ebc2/src/api/app-api.ts#L32">api/app-api.ts:32</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>context: <a href="../interfaces/_guest_context_.guestcontext.html" class="tsd-signature-type">GuestContext</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="waitdeployfinished" class="tsd-anchor"></a>
+					<h3>wait<wbr>Deploy<wbr>Finished</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">wait<wbr>Deploy<wbr>Finished<span class="tsd-signature-symbol">(</span>apps<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span>, intervalMs<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/miyajan/kintone-js/blob/994ebc2/src/api/app-api.ts#L224">api/app-api.ts:224</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Waits the deploy of Apps finished. Internally call <a href="_api_app_api_.appapi.html#getappdeploystatus">getAppDeployStatus</a> repeatedly until deploy of all Apps
+									become not PROCESSING.</p>
+								</div>
+								<p>App Management Permissions are needed.
+								API Tokens cannot be used with this.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>apps: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The App ID or IDs to wait deploy finished. The Maximum
+										limit is 300.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> intervalMs: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Interval time (ms) between calling <a href="_api_app_api_.appapi.html#getappdeploystatus">getAppDeployStatus</a>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -345,75 +526,6 @@
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="../modules/_api_app_api_.html">"api/app-<wbr>api"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_auth_api_token_auth_.html">"auth/api-<wbr>token-<wbr>auth"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_auth_basic_auth_.html">"auth/basic-<wbr>auth"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_auth_headers_customizer_.html">"auth/headers-<wbr>customizer"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_auth_password_auth_.html">"auth/password-<wbr>auth"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_auth_user_auth_.html">"auth/user-<wbr>auth"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_connection_.html">"connection"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_converter_app_.html">"converter/app"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_converter_app_info_.html">"converter/app-<wbr>info"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_converter_datetime_.html">"converter/datetime"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_converter_user_.html">"converter/user"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_headers_.html">"headers"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_kintone_.html">"kintone"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_main_.html">"main"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_model_app_.html">"model/app"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_model_app_info_.html">"model/app-<wbr>info"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_model_user_.html">"model/user"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_parameters_.html">"parameters"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_request_method_.html">"request-<wbr>method"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_response_app_.html">"response/app"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_response_app_info_.html">"response/app-<wbr>info"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_response_apps_.html">"response/apps"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_response_user_.html">"response/user"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_setting_.html">"setting"</a>
 					</li>
 				</ul>
 			</nav>
@@ -431,19 +543,37 @@
 								<a href="_api_app_api_.appapi.html#appconverter" class="tsd-kind-icon">app<wbr>Converter</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_api_app_api_.appapi.html#appdeploystatusconverter" class="tsd-kind-icon">app<wbr>Deploy<wbr>Status<wbr>Converter</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_api_app_api_.appapi.html#appinfoconverter" class="tsd-kind-icon">app<wbr>Info<wbr>Converter</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_api_app_api_.appapi.html#conn" class="tsd-kind-icon">conn</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_api_app_api_.appapi.html#guestcontext" class="tsd-kind-icon">guest<wbr>Context</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_api_app_api_.appapi.html#createpreviewapp" class="tsd-kind-icon">create<wbr>Preview<wbr>App</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_api_app_api_.appapi.html#deployappsettings" class="tsd-kind-icon">deploy<wbr>App<wbr>Settings</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_api_app_api_.appapi.html#getapp" class="tsd-kind-icon">get<wbr>App</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_api_app_api_.appapi.html#getappdeploystatus" class="tsd-kind-icon">get<wbr>App<wbr>Deploy<wbr>Status</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_api_app_api_.appapi.html#getapps" class="tsd-kind-icon">get<wbr>Apps</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_api_app_api_.appapi.html#setguestcontext" class="tsd-kind-icon">set<wbr>Guest<wbr>Context</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_api_app_api_.appapi.html#waitdeployfinished" class="tsd-kind-icon">wait<wbr>Deploy<wbr>Finished</a>
 							</li>
 						</ul>
 					</li>
